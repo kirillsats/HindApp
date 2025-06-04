@@ -6,7 +6,7 @@
     Title="Sissepääs">
 
     <VerticalStackLayout Padding="30" Spacing="20">
-        <Label Text="Sissepääs rakendusse" FontSize="24" HorizontalOptions="Center" />
+        <Label Text="Sissepääs HindAppisse" FontSize="24" HorizontalOptions="Center" />
 
         <Entry x:Name="UsernameEntry" Placeholder="Kasutajanimi" />
         <Entry x:Name="PasswordEntry" Placeholder="Parool" IsPassword="True" />

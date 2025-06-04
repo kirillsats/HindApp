@@ -61,7 +61,7 @@ public partial class ProductDetailsPage : ContentPage
                 };
                 await conn.InsertAsync(newFavorite);
                 price.IsFavorite = true;
-                await DisplayAlert("Valmis", "Kaup on lisatud valitud", "ОК");
+                await DisplayAlert("Valmis", "Kaup on lisatud valitudesse", "ОК");
             }
         }
         catch
@@ -105,7 +105,8 @@ public class FavoriteTextConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        return (value is bool isFav && isFav) ? "Juba valitud" : "Valituma";
+        return (value is bool isFav && isFav) ? "★ Juba valitud" : "☆ Lisa";
+
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => throw new NotImplementedException();
@@ -119,3 +120,4 @@ public class InverseBoolConverter : IValueConverter
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => throw new NotImplementedException();
 }
+

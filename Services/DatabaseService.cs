@@ -211,6 +211,7 @@ CREATE TABLE PriceHistory (
         {
             new User { IsAdmin = 1, PasswordHash = "space", Username = "root" },
             new User { IsAdmin = 0, PasswordHash = "space", Username = "user" }
+            
         };
 
         try

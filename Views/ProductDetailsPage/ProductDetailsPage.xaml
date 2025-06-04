@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HindApp.Views.ProductDetailsPage"
-             Title="Toote detailid"
+             Title="Toote detaalid"
              xmlns:local="clr-namespace:HindApp.Views">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -12,7 +12,11 @@
     </ContentPage.Resources>
 
     <VerticalStackLayout Padding="20" Spacing="10">
-        <Label x:Name="ProductTitle" FontSize="20" FontAttributes="Bold"/>
+        <Label x:Name="ProductTitle"
+           Text="Название продукта"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="StartAndExpand"/>
 
         <HorizontalStackLayout>
             <Label Text="Sorteeri hinna järgi ↑" />
@@ -38,6 +42,7 @@
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
+            
         </CollectionView>
 
     </VerticalStackLayout>
