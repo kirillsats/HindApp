@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HindApp.Views.ProductSearchPage"
+             Title="Toodete otsimine">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Entry x:Name="SearchEntry" Placeholder="Sisesta toote nimi" />
+
+        <Entry x:Name="LimitEntry" Placeholder="Kui palju tooteid leida" Keyboard="Numeric" />
+        <Picker x:Name="CategoryPicker" Title="Valige kategooria">
+            <Picker.ItemDisplayBinding>
+                <Binding Path="Name" />
+            </Picker.ItemDisplayBinding>
+        </Picker>
+
+
+        <Button Text="Otsi" Clicked="OnSearchClicked" />
+
+        <CollectionView x:Name="ProductsList" SelectionMode="Single" SelectionChanged="OnProductSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="Gray" StrokeThickness="1" Padding="10" Margin="5" BackgroundColor="Transparent">
+                        <Label Text="{Binding Name}" FontSize="16"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
